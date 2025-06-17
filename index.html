@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Syam Sundar - Full Stack Engineer & Automotive Enthusiast</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: radial-gradient(circle at center, #1a1a1a, #000);
+      color: #e6e6e6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 20px 50px 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #ff6f61;
+      text-shadow: 0 0 10px #ff6f61;
+    }
+
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 0;
+    }
+
+    header p {
+      font-size: 1.3rem;
+      font-style: italic;
+      margin-top: 5px;
+      color: #f9a825;
+    }
+
+    section {
+      background: rgba(255, 111, 97, 0.15);
+      border-radius: 15px;
+      padding: 20px 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 30px rgba(255, 111, 97, 0.3);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 111, 97, 0.4);
+    }
+
+    section h2 {
+      font-family: 'Orbitron', sans-serif;
+      color: #ff6f61;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #ff6f61;
+      padding-bottom: 6px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      padding: 6px 0;
+      font-size: 1.1rem;
+      border-bottom: 1px solid rgba(255, 111, 97, 0.3);
+    }
+
+    a {
+      color: #f9a825;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .cert-badges {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .cert-badge {
+      background: #222;
+      border: 2px solid #ff6f61;
+      padding: 10px 15px;
+      border-radius: 10px;
+      font-weight: bold;
+      box-shadow: 0 0 8px #ff6f61;
+      font-size: 0.9rem;
+      cursor: default;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .cert-icon {
+      width: 20px;
+      height: 20px;
+      background: #ff6f61;
+      border-radius: 50%;
+    }
+
+    .hobbies-list {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .hobby {
+      background: rgba(255, 111, 97, 0.3);
+      border-radius: 10px;
+      padding: 10px 15px;
+      box-shadow: 0 0 8px #f9a825;
+      font-weight: 600;
+      font-size: 1.1rem;
+      cursor: default;
+    }
+
+    .project-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .project-card {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid #ff6f61;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 0 10px rgba(255, 111, 97, 0.4);
+    }
+
+    .project-card h3 {
+      color: #f9a825;
+      margin: 0 0 10px 0;
+    }
+
+    .project-card p {
+      margin: 0 0 10px 0;
+    }
+
+    .project-card a {
+      color: #ff6f61;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      .hobbies-list {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Code. Deploy. Deliver. <br> Syam Sundar</h1>
+      <p>"With great power comes great responsibility."</p>
+    </header>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>Hello, I am Syam Sundar — a full stack developer with strong backend experience, and a passion for building scalable solutions. I’ve worked with Java, Spring Boot, PySpark, and Angular. I’m a curious learner, a passionate coder, and someone who rides motorcycles as hard as he debugs errors!</p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>Languages: Java, Python, JavaScript, TypeScript</li>
+        <li>Frameworks: Angular, Spring Boot, Spring MVC, Spring Security, Hibernate, PySpark</li>
+        <li>Web Dev: HTML5, CSS3, REST APIs, JSON</li>
+        <li>Testing: JUnit, Mockito, SonarQube</li>
+        <li>Databases: MySQL, Oracle (PL/SQL)</li>
+        <li>DevOps & Tools: Git, GitHub Actions, Maven, Docker, Jenkins, JFrog, IntelliJ, Postman, Swagger</li>
+        <li>Operating Systems: GNU/Linux, Windows</li>
+      </ul>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <ul>
+        <li><strong>Software Engineer @ Societe Generale (2024–Present):</strong> Migrated logic from MS SQL to PL/SQL, built PySpark pipelines, developed internal tools, and handled SonarQube issues.</li>
+        <li><strong>Intern @ Virtusa (2023):</strong> Built an IAS admission platform using Angular and Spring Boot with secured REST APIs and a responsive frontend.</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project-cards">
+        <div class="project-card">
+          <h3>Real-time Messaging App</h3>
+          <p>Chat app using Angular, Spring Boot, WebSocket with authentication and media sharing.</p>
+          <a href="https://github.com/syam-codes/realtime-messaging-app" target="_blank">View on GitHub</a>
+        </div>
+        <div class="project-card">
+          <h3>Recolored Image Detection</h3>
+          <p>Deep learning model using CNN, OpenCV, TensorFlow to detect manipulated images.</p>
+          <a href="https://github.com/syam-codes/recolored-image-detection" target="_blank">View on GitHub</a>
+        </div>
+        <div class="project-card">
+          <h3>Zomato Landing Page Clone</h3>
+          <p>Mobile-responsive frontend with HTML, CSS, JavaScript.</p>
+          <a href="https://github.com/syam-codes/zomato-landing-page-clone" target="_blank">View on GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <ul>
+        <li><strong>B.Tech CSE</strong> - Veltech University (CGPA: 8.8)</li>
+        <li><strong>Intermediate</strong> - MSR Junior College (85%)</li>
+        <li><strong>High School</strong> - ZPHS Valaparla (90%)</li>
+      </ul>
+    </section>
+
+    <section id="certifications">
+      <h2>Certifications & Achievements</h2>
+      <div class="cert-badges">
+        <div class="cert-badge" title="Oracle Certified Java SE 8 Programmer">
+          <div class="cert-icon"></div> OCP Java SE 8
+        </div>
+        <div class="cert-badge" title="NVIDIA Deep Learning">
+          <div class="cert-icon"></div> NVIDIA Deep Learning
+        </div>
+        <div class="cert-badge" title="Cisco Cybersecurity Essentials">
+          <div class="cert-icon"></div> Cisco Cybersecurity
+        </div>
+      </div>
+    </section>
+
+    <section id="links">
+      <h2>Online Profiles</h2>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/syamsundar-panchala-032b521a2/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/syam-codes" target="_blank">GitHub</a></li>
+      </ul>
+    </section>
+
+    <section id="hobbies">
+      <h2>Hobbies & Interests</h2>
+      <div class="hobbies-list">
+        <div class="hobby">Automobile Enthusiast 🏍️</div>
+        <div class="hobby">Cricket Player 🏏</div>
+        <div class="hobby">Badminton Player 🏸</div>
+        <div class="hobby">Online Gaming Aficionado 🎮</div>
+      </div>
+    </section>
+
+    <section id="contact" style="text-align: center;">
+      <h2>Contact Me</h2>
+      <p>If you would like to collaborate or connect, please feel free to reach out.</p>
+      <form action="mailto:syamsundar330@gmail.com" method="post" enctype="text/plain" style="max-width: 400px; margin: 0 auto;">
+        <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 10px; margin: 8px 0; border-radius: 8px; border: none;" />
+        <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 10px; margin: 8px 0; border-radius: 8px; border: none;" />
+        <textarea name="message" rows="4" placeholder="Your Message" style="width: 100%; padding: 10px; margin: 8px 0; border-radius: 8px; border: none;"></textarea>
+        <br />
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </section>
+  </div>
+</body>
+</html>
