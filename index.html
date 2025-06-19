@@ -10,10 +10,26 @@
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background: radial-gradient(circle at center, #1a1a1a, #000);
+      background-color: #0a0a0a; /* Fallback for browsers that don't support gradients or animated backgrounds */
+      background-image:
+        radial-gradient(circle, #fff 1px, transparent 1px),
+        radial-gradient(circle, #fff 1px, transparent 1px),
+        radial-gradient(circle, #fff 1px, transparent 1px);
+      background-size: 50px 50px, 70px 70px, 90px 90px;
+      background-position: 0 0, 25px 25px, 50px 50px;
+      animation: moveBackground 200s linear infinite; /* Increased duration for slower animation */
       color: #e6e6e6;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+    }
+
+    @keyframes moveBackground {
+      from {
+        background-position: 0 0, 25px 25px, 50px 50px;
+      }
+      to {
+        background-position: 5000px 5000px, 7000px 7000px, 9000px 9000px; /* Larger value for longer movement */
+      }
     }
 
     .container {
@@ -25,14 +41,14 @@
     header {
       text-align: center;
       margin-bottom: 30px;
-      color: #ff6f61;
-      text-shadow: 0 0 10px #ff6f61;
+ color: #6495ed;
+ text-shadow: 0 0 10px #6495ed;
     }
 
     header h1 {
       font-family: 'Orbitron', sans-serif;
       font-size: 3rem;
-      margin-bottom: 0;
+      margin-bottom: 0;color:yellow
     }
 
     header p {
@@ -43,21 +59,22 @@
     }
 
     section {
-      background: rgba(255, 111, 97, 0.15);
+      background: rgba(100, 149, 237, 0.15);
       border-radius: 15px;
       padding: 20px 25px;
       margin-bottom: 25px;
-      box-shadow: 0 4px 30px rgba(255, 111, 97, 0.3);
+      box-shadow: 0 4px 30px rgba(100, 149, 237, 0.3);
+      border: 1px solid rgba(255, 111, 97, 0.4);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 111, 97, 0.4);
+      transform: none;
     }
 
     section h2 {
       font-family: 'Orbitron', sans-serif;
-      color: #ff6f61;
+      color: #6495ed;
       margin-bottom: 15px;
-      border-bottom: 2px solid #ff6f61;
+      border-bottom: 2px solid #6495ed;
       padding-bottom: 6px;
     }
 
@@ -69,7 +86,7 @@
     ul li {
       padding: 6px 0;
       font-size: 1.1rem;
-      border-bottom: 1px solid rgba(255, 111, 97, 0.3);
+      border-bottom: 1px solid rgba(100, 149, 237, 0.3);
     }
 
     a {
@@ -89,23 +106,24 @@
     }
 
     .cert-badge {
-      background: #222;
-      border: 2px solid #ff6f61;
-      padding: 10px 15px;
+      background: #1a1a1a;
+      border: 2px solid #6495ed;
+      padding: 10px 18px;
       border-radius: 10px;
-      font-weight: bold;
+      font-weight: bold; 
       box-shadow: 0 0 8px #ff6f61;
+      gap: 8px;
       font-size: 0.9rem;
       cursor: default;
       display: flex;
       align-items: center;
-      gap: 8px;
+      transform: skew(-10deg); /* Added transform for parallelogram effect */
     }
 
     .cert-icon {
       width: 20px;
       height: 20px;
-      background: #ff6f61;
+      background: #6495ed;
       border-radius: 50%;
     }
 
@@ -117,10 +135,11 @@
     }
 
     .hobby {
-      background: rgba(255, 111, 97, 0.3);
+      background: rgba(100, 149, 237, 0.3);
       border-radius: 10px;
       padding: 10px 15px;
       box-shadow: 0 0 8px #f9a825;
+      cursor: default;
       font-weight: 600;
       font-size: 1.1rem;
       cursor: default;
@@ -134,10 +153,11 @@
 
     .project-card {
       background: rgba(0, 0, 0, 0.4);
-      border: 1px solid #ff6f61;
       border-radius: 10px;
-      padding: 15px;
+      border: 1px solid #6495ed;
+      padding: 18px;
       box-shadow: 0 0 10px rgba(255, 111, 97, 0.4);
+      transform: none;
     }
 
     .project-card h3 {
@@ -150,7 +170,7 @@
     }
 
     .project-card a {
-      color: #ff6f61;
+      color: #6495ed;
     }
 
     @media (max-width: 600px) {
@@ -173,14 +193,14 @@
 
     <section id="about">
       <h2>About Me</h2>
-      <p>Hello, I am Siva Naga Sai — a full stack developer with strong backend experience, and a passion for building scalable solutions. I’ve worked with Java, Spring Boot, PySpark, and Angular. I’m a curious learner, a passionate coder, and someone who rides motorcycles as hard as he debugs errors!</p>
+      <p>Hello, I am Siva Naga Sai — a full stack developer with strong backend experience, and a passion for building scalable solutions. I’ve worked with Java, Spring Boot,Hibernate and MySQL. I’m a curious learner, a passionate coder, and someone who rides motorcycles as hard as he debugs errors!</p>
     </section>
 
     <section id="skills">
       <h2>Skills</h2>
       <ul>
         <li>Languages: Java, Python, JavaScript</li>
-        <li>Frameworks: Angular, Spring Boot, Spring MVC, Spring Security, Hibernate</li>
+        <li>Frameworks:Spring Boot, Spring MVC, Spring Security, Hibernate</li>
         <li>Web Dev: HTML5, CSS3</li>
         <li>Testing: JUnit</li>
         <li>Databases: MySQL, Oracle (PL/SQL)</li>
@@ -192,8 +212,7 @@
     <section id="experience">
       <h2>Experience</h2>
       <ul>
-        <li><strong>Software Engineer @ Societe Generale (2024–Present):</strong> Migrated logic from MS SQL to PL/SQL, built PySpark pipelines, developed internal tools, and handled SonarQube issues.</li>
-        <li><strong>Intern @ Virtusa (2023):</strong> Built an IAS admission platform using Angular and Spring Boot with secured REST APIs and a responsive frontend.</li>
+        <li><strong>Intern @ Tap Academy (2023):</strong> Built an Online Food Delivery App using Java and Spring Boot with secured REST APIs and a responsive frontend.</li>
       </ul>
     </section>
 
@@ -221,23 +240,26 @@
     <section id="education">
       <h2>Education</h2>
       <ul>
-        <li><strong>B.Tech CSE</strong> - Veltech University (CGPA: 8.8)</li>
-        <li><strong>Intermediate</strong> - MSR Junior College (85%)</li>
-        <li><strong>High School</strong> - ZPHS Valaparla (90%)</li>
+        <li><strong>B.Tech CSE</strong> - Veltech University (CGPA: 8.5)</li>
+        <li><strong>Intermediate</strong> - MSR Junior College (8.7)</li>
+        <li><strong>High School</strong> - ZPHS Valaparla (8.9)</li>
       </ul>
     </section>
 
     <section id="certifications">
       <h2>Certifications & Achievements</h2>
       <div class="cert-badges">
-        <div class="cert-badge" title="Oracle Certified Java SE 8 Programmer">
-          <div class="cert-icon"></div> OCP Java SE 8
+        <div class="cert-badge" title="CCNA Introduction to Networks">
+          <div class="cert-icon"></div> CCNA
         </div>
         <div class="cert-badge" title="NVIDIA Deep Learning">
           <div class="cert-icon"></div> NVIDIA Deep Learning
         </div>
-        <div class="cert-badge" title="Cisco Cybersecurity Essentials">
-          <div class="cert-icon"></div> Cisco Cybersecurity
+         <div class="cert-badge" title="Wipro">
+          <div class="cert-icon"></div> Wipro TalentNext course
+        </div>
+        <div class="cert-badge" title="JavaFullStack">
+          <div class="cert-icon"></div> JavaFullStack 
         </div>
       </div>
     </section>
@@ -245,17 +267,16 @@
     <section id="links">
       <h2>Online Profiles</h2>
       <ul>
-        <li><a href="https://www.linkedin.com/in/syamsundar-panchala-032b521a2/" target="_blank">LinkedIn</a></li>
-        <li><a href="https://github.com/syam-codes" target="_blank">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/sivanagasai-ande-7ba223205/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/andesns" target="_blank">GitHub</a></li>
       </ul>
     </section>
 
     <section id="hobbies">
       <h2>Hobbies & Interests</h2>
       <div class="hobbies-list">
-        <div class="hobby">Automobile Enthusiast 🏍️</div>
-        <div class="hobby">Cricket Player 🏏</div>
-        <div class="hobby">Badminton Player 🏸</div>
+        <div class="hobby">AI Enthusiast 🤖</div>
+        <div class="hobby">Chess Player ♟️</div>
         <div class="hobby">Online Gaming Aficionado 🎮</div>
       </div>
     </section>
